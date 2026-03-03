@@ -6,19 +6,19 @@
 
 occupied(5, "CCCCC", "CCCCC")
 occupied(7, "CCCCCCC", "C.C.C.C") """
-
-def language(T):
+""" 
+""" 
+t = "t"
+s = "s"
+def language(t):
     t_count=0
     s_count=0
-    for i in range(len(T)):
-        if T[i] == "T":
+    for i in range(len(t)):
+        if t[i].lower() == "t":
             t_count += 1
-    for i in range(len(S)):
-        if T[i] == "S":
+            print("English")
+        elif s[i].lower() == "s":
             s_count += 1
-    if t_count > s_count:
-        print("English")
-    else:
-        print("French")
+            print("French")
 
-    language(1, "TTTT")
+language("SSSS")
