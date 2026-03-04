@@ -26,13 +26,17 @@ def language(t):
 
 language("TTTT")
  """
-honi = "honi"
+h = "h" 
+o = "o"
+n = "n"
+i = "i"
 honi_amount = 0
 def find_honi(sentence):
     words = sentence.split()
     for honi in words:
-        if "honi" in honi.lower():
-            print("Found (honi):", honi)
+        search_term = h + o + n + i
+        if search_term in honi.lower():
+            print("Found {0}: {1}".format(honi + 1, honi))
             return
-    print("0")
-find_honi("MAGNUS")
+        print("0")
+find_honi("honi")
