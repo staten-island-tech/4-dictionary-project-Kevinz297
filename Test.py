@@ -8,7 +8,7 @@ occupied(5, "CCCCC", "CCCCC")
 occupied(7, "CCCCCCC", "C.C.C.C") """
 """ 
 """ 
-t = "t"
+""" t = "t"
 s = "s"
 def language(t):
     t_count=0
@@ -16,9 +16,23 @@ def language(t):
     for i in range(len(t)):
         if t[i].lower() == "t":
             t_count += 1
-            print("English")
-        elif s[i].lower() == "s":
+        elif t[i].lower() == "s":
             s_count += 1
-            print("French")
 
-language("SSSS")
+    if t_count > s_count:
+        print("English")
+    else:
+        print("French")
+
+language("TTTT")
+ """
+honi = "honi"
+honi_amount = 0
+def find_honi(sentence):
+    words = sentence.split()
+    for honi in words:
+        if "honi" in honi.lower():
+            print("Found (honi):", honi)
+            return
+    print("0")
+find_honi("MAGNUS")
