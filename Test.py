@@ -27,7 +27,7 @@ def language(t):
 language("TTTT")
  """
 
-
+""" 
 
 def find_honi(sentence):
     HONI=["H", "O", "N", "I"]
@@ -41,4 +41,4 @@ def find_honi(sentence):
             state = 0
     print(count)
 
-find_honi("HHHHOOOONNNNIIII")
+find_honi("HHHHOOOONNNNIIII") """
