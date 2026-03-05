@@ -26,17 +26,19 @@ def language(t):
 
 language("TTTT")
  """
-h = "h" 
-o = "o"
-n = "n"
-i = "i"
-honi_amount = 0
+
+
+
 def find_honi(sentence):
-    words = sentence.split()
-    for honi in words:
-        search_term = h + o + n + i
-        if search_term in honi.lower():
-            print("Found {0}: {1}".format(honi + 1, honi))
-            return
-        print("0")
-find_honi("honi")
+    HONI=["H", "O", "N", "I"]
+    count = 0
+    state = 0
+    for honiblock in sentence:
+        if HONI[state] == honiblock:
+            state += 1
+        if state >= 4:
+            count += 1
+            state = 0
+    print(count)
+
+find_honi("HHHHOOOONNNNIIII")
