@@ -42,3 +42,5 @@ def find_honi(sentence):
     print(count)
 
 find_honi("HHHHOOOONNNNIIII") """
+
+for
