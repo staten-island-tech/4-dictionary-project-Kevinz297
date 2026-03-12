@@ -45,7 +45,7 @@ find_honi("HHHHOOOONNNNIIII")
 
 
 """  
-best_buy_items = [
+""" Game_Currency = [
     {"name": "DDR5 32 gigabyte Ram", "price": 999.99, "description": "High-performance RAM for gaming and content creation."},
     {"name": "Vbucks", "price": 499.99, "description": "In-game currency for Fortnite."},
     {"name": "Social Credit", "price": 199.99, "description": "A measure of your online reputation."},
@@ -53,5 +53,29 @@ best_buy_items = [
     {"name": "Robux", "price": 399.99, "description": "In-game currency for Roblox."}
 ]
 
-for index, item in enumerate(best_buy_items):
-    print(index, ":", item["name"])   
+for index, item in enumerate(Game_Currency):
+    print(index, ":", item["name"])    """
+
+def slot_m(q, m1, m2, m3):
+    m3_played=0
+    m1_played=0
+    m2_played=0
+    while q > 0:
+        q-=1
+        m1_played+=1
+        if m1_played == 35:
+            q+=30
+        
+            q-=1
+            m2_played+=1
+        if m2_played == 100:
+            q+=60
+
+            q-=1
+            m3_played+=1
+        if m3_played == 10:
+            q+=9
+
+        x=m1_played+m2_played+m3_played 
+    print(f"Martha played {x} times before going broke.")
+slot_m(77,4,9,3)
