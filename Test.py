@@ -44,38 +44,44 @@ def find_honi(sentence):
 find_honi("HHHHOOOONNNNIIII")
 
 
-"""  
-""" Game_Currency = [
+"""
+Game_Currency = [
     {"name": "DDR5 32 gigabyte Ram", "price": 999.99, "description": "High-performance RAM for gaming and content creation."},
     {"name": "Vbucks", "price": 499.99, "description": "In-game currency for Fortnite."},
     {"name": "Social Credit", "price": 199.99, "description": "A measure of your online reputation."},
     {"name": "Bitcoin", "price": 1.00, "description": "A decentralized digital currency."},
     {"name": "Robux", "price": 399.99, "description": "In-game currency for Roblox."}
 ]
+ for index, item in enumerate(Game_Currency):
+    print(index, ":", item["name"]) 
 
-for index, item in enumerate(Game_Currency):
-    print(index, ":", item["name"])    """
 
-def slot_m(q, m1, m2, m3):
-    m3_played=0
-    m1_played=0
-    m2_played=0
+
+""" def slot_m(q, m1, m2, m3):
+    m1_played = m1
+    m2_played = m2
+    m3_played = m3
     while q > 0:
-        q-=1
-        m1_played+=1
-        if m1_played == 35:
-            q+=30
-        
-            q-=1
-            m2_played+=1
-        if m2_played == 100:
-            q+=60
+        q -= 1
+        m1_played += 1
+        if q==0:
+            break
+        if m1_played % 35 == 0:
+            q += 30
 
-            q-=1
-            m3_played+=1
-        if m3_played == 10:
-            q+=9
+        q -= 1
+        m2_played += 1
+        if q==0:
+            break
+        if m2_played % 100 == 0:
+            q += 60
 
-        x=m1_played+m2_played+m3_played 
+        q -= 1
+        m3_played += 1
+        if q==0:
+            break
+        if m3_played % 10 == 0:
+            q += 9
+    x = m1_played-m1+m2_played-m2+m3_played-m3
     print(f"Martha played {x} times before going broke.")
-slot_m(77,4,9,3)
+slot_m(77,4,9,3)  """
