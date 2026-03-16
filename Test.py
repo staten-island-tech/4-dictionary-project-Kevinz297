@@ -52,8 +52,9 @@ Game_Currency = [
     {"name": "Bitcoin", "price": 1.00, "description": "A decentralized digital currency."},
     {"name": "Robux", "price": 399.99, "description": "In-game currency for Roblox."}
 ]
- for index, item in enumerate(Game_Currency):
+for index, item in enumerate(Game_Currency):
     print(index, ":", item["name"]) 
+    
 
 
 
