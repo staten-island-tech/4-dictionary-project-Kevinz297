@@ -58,9 +58,27 @@ Store = ""
 Cart = {}
 Sum = 0
 while Store != "counter":
-    if 
-
-
+    if Store == "add":
+        item = input("Enter item to add: ")
+        if item in Game_Currency:
+            Cart[item] = Cart.get(item, 0) + 1
+            Sum += Game_Currency[item]["price"]
+        else:
+            print("Item added")
+    elif Store == "remove":
+        item = input("Enter item to remove: ")
+        if item in Cart:
+            Sum -= Game_Currency[item]["price"] * Cart[item]
+            del Cart[item]
+        else:
+            print("Item not in cart.")
+    elif Store == "checkout":
+        print("Checking out...")
+        for item, quantity in Cart.items():
+            print(f"{item}: {quantity}")
+        print(f"Total: {Sum}")
+        break
+    Store = input("Enter command (add/remove/checkout/counter): ")
 
 """ def slot_m(q, m1, m2, m3):
     m1_played = m1
@@ -89,4 +107,4 @@ while Store != "counter":
             q += 9
     x = m1_played-m1+m2_played-m2+m3_played-m3
     print(f"Martha played {x} times before going broke.")
-slot_m(77,4,9,3)  """
+slot_m(77,4,9,3)  """ 
