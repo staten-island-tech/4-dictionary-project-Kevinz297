@@ -54,7 +54,11 @@ Game_Currency = [
 ]
 for index, item in enumerate(Game_Currency):
     print(index, ":", item["name"]) 
-    
+Store = ""
+Cart = {}
+Sum = 0
+while Store != "counter":
+    if 
 
 
 
