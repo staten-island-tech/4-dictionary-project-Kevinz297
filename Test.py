@@ -42,8 +42,6 @@ def find_honi(sentence):
     print(count)
 
 find_honi("HHHHOOOONNNNIIII")
-
-
 """
 Game_Currency = [
     {"name": "DDR5 32 gigabyte Ram", "price": 999.99, "description": "High-performance RAM for gaming and content creation."},
@@ -56,29 +54,19 @@ for index, item in enumerate(Game_Currency):
     print(index, ":", item["name"]) 
 Store = ""
 Cart = {}
-Sum = 0
-while Store != "counter":
-    if Store == "add":
-        item = input("Enter item to add: ")
-        if item in Game_Currency:
-            Cart[item] = Cart.get(item, 0) + 1
-            Sum += Game_Currency[item]["price"]
-        else:
-            print("Item added")
-    elif Store == "remove":
-        item = input("Enter item to remove: ")
-        if item in Cart:
-            Sum -= Game_Currency[item]["price"] * Cart[item]
-            del Cart[item]
-        else:
-            print("Item not in cart.")
-    elif Store == "checkout":
-        print("Checking out...")
-        for item, quantity in Cart.items():
-            print(f"{item}: {quantity}")
-        print(f"Total: {Sum}")
-        break
-    Store = input("Enter command (add/remove/checkout/counter): ")
+total = 0
+shopping = ""
+while shopping == "yes":
+        for i in range(len(Store)):
+            print(i, "-", Store[i]["name"], "$", Store[i]["price"])
+        choice = int(input("Pick an item number: "))
+        Cart.Append(Store[choice]["name"])
+        total = total + Store[choice]["price"]
+        shopping = input("Continue shopping? (yes/no): ")
+        print("Items bought:")
+        for item in Cart:
+            print(item)
+        print("Total:", total)
 
 """ def slot_m(q, m1, m2, m3):
     m1_played = m1
