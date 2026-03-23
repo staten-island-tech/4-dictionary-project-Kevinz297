@@ -52,21 +52,21 @@ Game_Currency = [
 ]
 for index, item in enumerate(Game_Currency):
     print(index, ":", item["name"]) 
-Store = ""
-Cart = {}
+Store = Game_Currency
+Cart = []
 total = 0
-shopping = ""
-while shopping == "yes":
-        for i in range(len(Store)):
-            print(i, "-", Store[i]["name"], "$", Store[i]["price"])
-        choice = int(input("Pick an item number: "))
-        Cart.Append(Store[choice]["name"])
-        total = total + Store[choice]["price"]
-        shopping = input("Continue shopping? (yes/no): ")
-        print("Items bought:")
-        for item in Cart:
-            print(item)
-        print("Total:", total)
+Shopping = "yes"
+while Shopping == "yes":
+    for i in range(len(Store)):
+        print(i, "-", Store[i]["name"], "$", Store[i]["price"])
+    choice = int(input("Pick an item number: "))
+    Cart.append(Store[choice]["name"])
+    total = total + Store[choice]["price"]
+    Shopping = input(" Do you want to continue shopping? (yes/no): ")
+print("Items bought:")
+for item in Cart:
+    print(item)
+print("Total:", total)
 
 """ def slot_m(q, m1, m2, m3):
     m1_played = m1
