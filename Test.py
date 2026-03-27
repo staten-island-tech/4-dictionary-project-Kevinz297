@@ -97,7 +97,7 @@ print("Total:", total)
     print(f"Martha played {x} times before going broke.")
 slot_m(77,4,9,3)  """ 
 
-def plantations (N, H):
+""" def plantations (N, H):
     current_increase_streak=1
     current_decrease_streak=2
     longest_increase_streak=1
@@ -118,4 +118,4 @@ def plantations (N, H):
     print(longest_increase_streak)
     print(longest_decrease_streak)
 
-plantations(4, [1, 3, 4, 2])
+plantations(4, [1, 3, 4, 2]) """
