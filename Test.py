@@ -43,7 +43,8 @@ def find_honi(sentence):
 
 find_honi("HHHHOOOONNNNIIII")
 """
-""" Game_Currency = [
+
+Game_Currency = [
     {"name": "DDR5 32 gigabyte Ram", "price": 999.99, "description": "High-performance RAM for gaming and content creation."},
     {"name": "Vbucks", "price": 499.99, "description": "In-game currency for Fortnite."},
     {"name": "Social Credit", "price": 199.99, "description": "A measure of your online reputation."},
@@ -63,11 +64,13 @@ while Shopping == "yes":
     Cart.append(Store[choice]["name"])
     total = total + Store[choice]["price"]
     Shopping = input(" Do you want to continue shopping? (yes/no): ")
-print("Items bought:")
+print("Items bought:") 
+
+
 for item in Cart:
     print(item)
 print("Total:", total)
- """
+
 """ def slot_m(q, m1, m2, m3):
     m1_played = m1
     m2_played = m2
